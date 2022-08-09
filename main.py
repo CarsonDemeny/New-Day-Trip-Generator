@@ -37,3 +37,19 @@ def displayed_trip(list_of_trip_options):
         trip_strings += f' {trip_titles[index]}: {list_of_trip_options[index]} \n'
 
     print(trip_strings)
+
+def reselect_trip_option(list_of_trip_options):
+    user_input = input('Which feature of the trip would you like to change? ')
+
+    if user_input == 'Destination':
+        list_of_trip_options[0] = random.choice(destinations_list)
+    elif user_input == 'Restaurant':
+        list_of_trip_options[1] = random.choice(restaurants_list)
+    elif user_input == 'Transportation':
+        list_of_trip_options[2] = random.choice(mode_of_transport_list)
+    elif user_input == 'Entertainment':
+        list_of_trip_options[3] = random.choice(entertainment_list)
+    
+    return list_of_trip_options
+
+main_generator()
