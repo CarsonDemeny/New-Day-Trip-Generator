@@ -1,1 +1,1 @@
-# New-Day-Trip-Generator
+New Trip Generator
