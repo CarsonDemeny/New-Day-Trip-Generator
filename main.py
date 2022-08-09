@@ -31,12 +31,9 @@ def displayed_ending():
     print('Awesome! Glad to help pick out your perfect trip:')
 
 def displayed_trip(list_of_trip_options):
-    trip_strings = ''
     trip_titles = ['Destination', 'Restaurant', 'Transportation', 'Entertainment']
     for index in range(len(list_of_trip_options)):
-        trip_strings += f' {trip_titles[index]}: {list_of_trip_options[index]} \n'
-
-    print(trip_strings)
+        print(f' {trip_titles[index]}: {list_of_trip_options[index]}')
 
 def reselect_trip_option(list_of_trip_options):
     user_input = input('Which feature of the trip would you like to change? ')
