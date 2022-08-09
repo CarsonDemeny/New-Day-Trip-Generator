@@ -19,3 +19,21 @@ def main_generator():
             generated_trip = reselect_trip_option(generated_trip)
         else:
             print("That's not an option.")
+
+   displayed_ending()
+
+   displayed_trip(generated_trip)
+
+def displayed_greeting():
+    print('So I heard you need need a randomly generated trip? Here is your randomly generated trip!')
+
+def displayed_ending():
+    print('Awesome! Glad to help pick out your perfect trip:')
+
+def displayed_trip(list_of_trip_options):
+    trip_strings = ''
+    trip_titles = ['Destination', 'Restaurant', 'Transportation', 'Entertainment']
+    for index in range(len(list_of_trip_options)):
+        trip_strings += f' {trip_titles[index]}: {list_of_trip_options[index]} \n'
+
+    print(trip_strings)
